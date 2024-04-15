@@ -6,7 +6,7 @@ class GrammarRule
     public char NonTerminal { get; set; }
     public List<string> Productions { get; set; }
 
-    public GrammarRule(char nonTerminal, List<string> productions)
+    public GrammarRule(char nonTerminal, List<string> productions) // Hello from Avazbek!
     {
         NonTerminal = nonTerminal;
         Productions = productions;
