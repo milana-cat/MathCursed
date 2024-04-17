@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="File load" HorizontalAlignment="Left" Height="32" Margin="28,10,0,0" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690"/>
-        <TextBox HorizontalAlignment="Left" Height="89" Margin="28,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690"/>
-        <Button Content="Start" HorizontalAlignment="Left" Height="32" Margin="28,161,0,0" VerticalAlignment="Top" Width="78"/>
-        <TextBox HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="Input" VerticalAlignment="Top" Width="690"/>
+        <Button Content="File load" HorizontalAlignment="Left" Height="32" Margin="28,10,0,0" VerticalAlignment="Top" Width="78" Click="FileLoad_Click"/>
+        <TextBox Name="InputTextBox" HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="Input" VerticalAlignment="Top" Width="690"/>
+        <!-- <TextBox HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690"/> -->
+        <Button Content="Start" HorizontalAlignment="Left" Height="32" Margin="28,161,0,0" VerticalAlignment="Top" Width="78" Click="Start_Click"/>
+        <TextBox Name="OutputTextBox" HorizontalAlignment="Left" Height="89" Margin="28,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690" IsReadOnly="True"/>
+        
 
     </Grid>
 </Window>
