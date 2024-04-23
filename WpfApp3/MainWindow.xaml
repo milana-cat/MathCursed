@@ -5,14 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Устранение левой рекурсии в КС-грамматике" Height="450" Width="800">
+    <Window.Resources>
+        <Color x:Key="SolidColorBrushColor1">#FF68CBCB</Color>
+    </Window.Resources>
     <Grid>
-        <Button Content="File load" HorizontalAlignment="Left" Height="32" Margin="28,10,0,0" VerticalAlignment="Top" Width="78" Click="FileLoad_Click"/>
-        <TextBox Name="InputTextBox" HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="Input" VerticalAlignment="Top" Width="690"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="561*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Загрузить из файла" HorizontalAlignment="Left" Height="32" Margin="28,382,0,0" VerticalAlignment="Top" Width="184" Click="FileLoad_Click" FontSize="20" BorderBrush="#FF68CBCB" Background="#FF68CBCB"/>
         <!-- <TextBox HorizontalAlignment="Left" Height="89" Margin="28,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690"/> -->
-        <Button Content="Start" HorizontalAlignment="Left" Height="32" Margin="28,161,0,0" VerticalAlignment="Top" Width="78" Click="Start_Click"/>
-        <TextBox Name="OutputTextBox" HorizontalAlignment="Left" Height="89" Margin="28,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="690" IsReadOnly="True"/>
-        
+        <Button Content="-&gt;" HorizontalAlignment="Left" Height="39" Margin="129,178,0,0" VerticalAlignment="Top" Width="64" Click="Start_Click" Grid.Column="2" FontSize="20" Background="#FF68CBCB" RenderTransformOrigin="1.331,0.579">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource SolidColorBrushColor1}"/>
+            </Button.BorderBrush>
+        </Button>
+        <TextBox Name="OutputTextBox" HorizontalAlignment="Left" Height="318" Margin="200,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="318" IsReadOnly="True" ScrollViewer.CanContentScroll="True" Grid.Column="2" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontSize="20"/>
+        <TextBox x:Name="InputTextBox" AcceptsReturn="True" HorizontalAlignment="Left" Height="318" Margin="28,64,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="329" IsReadOnly="False" ScrollViewer.CanContentScroll="True" Grid.ColumnSpan="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontSize="20"/>
+        <Button Content="Загрузить в файл
+                " HorizontalAlignment="Left" Height="32" Margin="200,382,0,0" VerticalAlignment="Top" Width="173" Click="FileUpLoad_Click" Grid.Column="2" Background="#FF68CBCB" FontSize="20" BorderBrush="{x:Null}" Visibility="Hidden"/>
+        <Button Content="Справка" HorizontalAlignment="Left" Height="32" Margin="470,2,0,0" VerticalAlignment="Top" Width="91" Click="QA_Click" Grid.Column="2" Background="#FF68CBCB" FontSize="20" BorderBrush="{x:Null}"/>
+        <Label Content="КС-грамматика с левой рекурсией" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="38" Margin="28,26,0,0" VerticalAlignment="Top" Width="329" FontSize="20"/>
+        <Label Content="Результат без рекурсии" HorizontalAlignment="Left" Height="38" Margin="200,26,0,0" VerticalAlignment="Top" Width="329" FontSize="20" Grid.Column="2"/>
+        <Button Content="очистить" HorizontalAlignment="Left" Height="39" Margin="47,382,0,0" VerticalAlignment="Top" Width="71" Click="Clear_Click" Grid.Column="2" FontSize="16" Background="#FF68CBCB" RenderTransformOrigin="1.331,0.579">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource SolidColorBrushColor1}"/>
+            </Button.BorderBrush>
+        </Button>
+        <Button Content="очистить" HorizontalAlignment="Left" Height="39" Margin="445,385,0,0" VerticalAlignment="Top" Width="70" Click="ClearOut_Click" Grid.Column="2" FontSize="16" Background="#FF68CBCB" RenderTransformOrigin="1.331,0.579">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource SolidColorBrushColor1}"/>
+            </Button.BorderBrush>
+        </Button>
+
 
     </Grid>
 </Window>

@@ -95,6 +95,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ClassLeftRecurs\ClassLeftRecurs.csproj">
+      <Project>{C369E99E-6EA4-43F5-9DB2-EC3355F70B7B}</Project>
+      <Name>ClassLeftRecurs</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConsoleApp2\ConsoleApp2.csproj">
       <Project>{7e82f4df-8a2b-4b08-9bc1-8d63d52eb190}</Project>
       <Name>ConsoleApp2</Name>
